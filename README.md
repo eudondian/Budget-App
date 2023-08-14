@@ -171,7 +171,7 @@ If you like this project give me a star
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to thank Microverse for the learning experinece and my partners for all help given
+I would like to thank Microverse for the learning experinece,  Gregoire Vella on Behance for the design, and my partners for all help given
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

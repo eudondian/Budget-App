@@ -1,0 +1,22 @@
+<h1>Add a New Expense</h1>
+
+<%= form_with(model: @expense, url: category_expenses_path(@category), local: true) do |form| %>
+ <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+  </div>
+
+  <div>
+    <%= form.label :category_id %>
+    <%= form.collection_select :category_id, @categories, :id, :name, value: @category.id  %>
+  </div>
+  
+  <div>
+    <%= form.submit "Save" %>
+  </div>
+<% end %>

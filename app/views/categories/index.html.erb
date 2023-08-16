@@ -1,0 +1,13 @@
+<h1>Categories</h1>
+
+<% @categories.each do |category| %>
+  <div class="category-item">
+    <h2><%= category.name %></h2>
+    <small><%= category.created_at.strftime('%d-%b-%Y') %>
+    <p>Icon: <img src="<%= category.icon %>" alt="Category Icon" /></p>
+    <p>Total Amount: <%= category.expenses.sum(:amount) %></p>
+    <%= link_to 'Transactions', category_path(category) %>
+  </div>
+<% end %>
+
+<%= link_to 'Add a New Category', new_category_path %>

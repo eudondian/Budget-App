@@ -1,0 +1,15 @@
+<h1><%= @category.name %> category</h1>
+<p>Icon: <img src="<%= @category.icon %>" alt="Category Icon" /></p>
+<p>Total Amount: <%= @total_amount %></p>
+
+<h2>Transactions</h2>
+<ul>
+  <% @expenses.each do |expense| %>
+    <li><%= expense.name %> - Amount: <%= expense.amount %></li>
+    
+  <% end %>
+</ul>
+
+<%= link_to 'Add a new expense', new_category_expense_path(@category) %>
+<%= link_to 'Back', categories_path %>
+

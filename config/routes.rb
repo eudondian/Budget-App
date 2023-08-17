@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   authenticated :user do
     root to: "categories#index", as: :authenticated_root
   end
+  root to: 'splash#splash'
   resources :categories do
     resources :expenses, only: [:index, :new, :create, :edit, :update, :destroy]
   end

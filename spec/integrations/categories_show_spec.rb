@@ -18,24 +18,13 @@ RSpec.describe 'Viewing a category', type: :feature do
   end
 
   it 'displays the category icon' do
-    # visit category_path(@category)
     assert_selector "img[src*='img-avatar.png']", visible: :all
   end
-  # it "displays the category icon" do
-  #   visit category_path(@category)
-  #   save_and_open_screenshot # This will save a screenshot in your working directory
-  #   expect(page).to have_css("img[alt='Category Icon']")
-  # end
-
-
 
   it 'displays the total amount' do
     visit category_path(@category)
     expect(page).to have_content(/Total Amount:\s*150/)
   end
-
-
-
 
   it 'has a link back to categories' do
     visit category_path(@category)

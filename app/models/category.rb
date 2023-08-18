@@ -3,7 +3,7 @@ class Category < ApplicationRecord
 
   has_many :expenses
   def total_amount
-    expenditures.sum(:amount)
+    expenses.sum(:amount)
   end
 
   validates :name, presence: true

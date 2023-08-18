@@ -285,8 +285,8 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.7)
   rubocop (>= 1.0, < 2.0)
-  sassc-rails
   selenium-webdriver
+  sprockets-rails
   stimulus-rails
   turbo-rails
   tzinfo-data

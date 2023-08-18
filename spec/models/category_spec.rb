@@ -23,8 +23,9 @@ RSpec.describe Category, type: :model do
   it 'is not valid without an icon' do
     category = Category.new(
       name: 'Groceries',
-      author: user
+      author_id: user.id
     )
     expect(category).not_to be_valid
   end
+  
 end

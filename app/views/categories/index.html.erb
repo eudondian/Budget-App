@@ -1,14 +1,23 @@
-<%= render partial: 'layouts/nav' %>
-<h1>Categories</h1>
-
-<% @categories.each do |category| %>
-  <div class="category-item">
-    <h2><%= category.name %></h2>
-    <small><%= category.created_at.strftime('%d-%b-%Y') %>
-    <p>Icon: <img src="<%= category.icon %>" alt="Category Icon" /></p>
-    <p>Total Amount: <%= category.expenses.sum(:amount) %></p>
-    <%= link_to 'Transactions', category_path(category) %>
+<div class="container mt-4">
+  <div class="nav-header">
+    <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-danger signout-btn border-0", style: "background-color: #3778c2;" %>
+    <h2>Categories </h2>
   </div>
-<% end %>
+  <% @categories.each do |category| %>
+    <div class="category-item border p-3 mb-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+          <img src="<%= category.icon %>" alt="Category Icon" class="img-fluid img-avatar" width='50px'/>
+          <h2 class="ms-5 md-3"><%= category.name %></h2>
+        </div>
+        <p class="mb-0">
+          $ <%= category.expenses.sum(:amount) %>
+        </p>
+      </div>
+      <small><%= category.created_at.strftime('%d-%b-%Y') %></small>
+      <%= link_to 'Transactions', category_path(category), class: "text-text-white ms-3" %>
+    </div>
+  <% end %>
 
-<%= link_to 'Add a New Category', new_category_path %>
+  <p id='scan'><%= link_to 'Add a Category', new_category_path, class: 'btn text-white' %></p>
+</div>

@@ -27,5 +27,4 @@ RSpec.describe Category, type: :model do
     )
     expect(category).not_to be_valid
   end
-  
 end

@@ -124,9 +124,9 @@ input.btn {
   font-size: 16px;
 }
 
-.alert p{
-    margin: 0;
-    padding: 0;
+.alert p {
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -168,8 +168,6 @@ input.btn {
   background-color: #5fb523;
 } */
 
-
-.btn .btn-success{
+.btn .btn-success {
   background-color: #5fb523 !important;
 }
-

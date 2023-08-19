@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag 'expense' %>
+<div class="nav-head">
+<h2>Transactions for <%= @category.name %></h2>
+<p class="bck"><%= link_to raw('&#8592;'), categories_path %></p>
+</div>
+<div class="container mt-4">
+
+    <p><strong>Total Amount:</strong> $<%= @total_amount %></p>
+   
+    <ul class="list-group">
+      <% @expenses.each do |expense| %>
+        <li class="list-group-item"><%= expense.name %> - Amount: $<%= expense.amount %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="text-center mt-4">
+  <%= link_to 'Add a new expense', new_category_expense_path(@category), class: 'n-btn', id:"add-btn", style: 'width: 425px; height: px;' %>
+</div>

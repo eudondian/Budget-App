@@ -129,45 +129,6 @@ input.btn {
   padding: 0;
 }
 
-
-/* .nav-head {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.container {
-  margin-top: 20px;
-}
-
-.list-group-item {
-  border: none;
-}
-
-.mt-4 {
-  margin-top: 20px;
-}
-
-@media (max-width: 767px) {
-  .btn-lg {
-    width: 100%;
-  }
-}
-
-.btn-lg.text-success {
-  background-color: #28a745;
-  color: white;
-}
-
-.btn-lg.text-success:hover {
-  background-color: #218838;
-} */
-
-/* .btn, .btn-success, .btn-block, a.n-btn{
-  width: 100%;
-  height: px;
-  background-color: #5fb523;
-} */
-
 .btn .btn-success {
   background-color: #5fb523 !important;
 }
